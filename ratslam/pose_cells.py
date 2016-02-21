@@ -97,6 +97,15 @@ class PoseCells(object):
         # print x, y, th
         return (x, y, th)
 
+    def get_current_exp_id(self):
+
+        return self.current_exp
+
+    def get_relative_rad(self):
+
+        return self.vt_delta_pc_th * 2.0 * np.pi / PC_DIM_TH
+
+
     def __call__(self, view_cell, vtrans, vrot):
         '''Execute an interation of pose cells.
 
